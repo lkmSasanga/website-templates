@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #070707;
+  --background-soft: #111113;
+  --foreground: #f4efe7;
+  --muted: #b7afa3;
+  --accent: #c7a46a;
+  --accent-soft: #dec59a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-soft: var(--background-soft);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 65%, transparent);
+  color: #fff;
+}
+
+.film-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 0.7px, transparent 0.7px);
+  background-size: 3px 3px;
+  opacity: 0.22;
+  mix-blend-mode: soft-light;
+}
