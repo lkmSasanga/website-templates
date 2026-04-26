@@ -1,0 +1,6 @@
+# Place your restaurant images here
+# 
+# Reference them in src/lib/siteData.ts like:
+# image: "/images/your-image.jpg"
+#
+# If an image is missing, components will show a gradient placeholder
