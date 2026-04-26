@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --accent: #c76a2a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+a,
+button {
+  cursor: none;
+}
+
+.hero-mask {
+  overflow: hidden;
+}
+
+.cinematic-title {
+  font-family: var(--font-syncopate), var(--font-inter), Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.text-accent {
+  color: var(--accent);
+}
